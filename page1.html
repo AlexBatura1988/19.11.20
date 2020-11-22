@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <script>
+        let chk1;
+        let divSure;
+        function init(){
+            chk1=document.getElementById("chk1");
+            divSure=document.getElementById("divsure");
+            updateDivSure();
+
+        }
+        function updateDivSure(){
+            /*if(chk1.checked)
+             divSure.innerHTML="i am sure";
+            else
+             divSure.innerHTML=" i am not sure" */
+             divSure.innerHTML = "I am " + (chk1.checked ? "" : "NOT") + " sure";
+            
+        }
+        
+    </script>
+</head>
+<body onload="init()">
+    <p> are you sure?<input id="chk1" type="checkbox" onchange="updateDivSure()"/></p>
+    <div id="divsure"></div>
+    
+</body>
+</html>
